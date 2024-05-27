@@ -1,5 +1,5 @@
 package entity;
 
-public class BaseEntity {
-
+public interface BaseEntity {
+	String TAB = "\t";
 }
