@@ -22,6 +22,12 @@ public class login extends BaseServlet {
 		super.session.setAttribute("LOGIN", loginData.get("userNm"));
 		return "menu";
 	}
+
+	@Override
+	protected String getPageName() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
     
 	
 }
