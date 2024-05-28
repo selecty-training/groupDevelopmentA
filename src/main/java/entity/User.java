@@ -17,10 +17,10 @@ public class User implements BaseEntity {
 	
 	
 	//ユーザーID
-	public Integer getIdEmployee() {
+	public Integer getIdUser() {
 		return idUser;
 	}
-	public void setIdEmployee(Integer idUser) {
+	public void setIdUser(Integer idUser) {
 		this.idUser = idUser;
 	}
 
