@@ -16,7 +16,7 @@ public class Insert extends BaseServlet {
 		);
 
 		if (!pageParam[1].equals(pageParam[2])) {
-			throw new Exception("パスワードが違うよ");
+			throw new Exception("パスワードが違う");
 		}
 
 		return "menu";
