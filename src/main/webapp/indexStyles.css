@@ -14,12 +14,32 @@ body {
     align-items: center;
     height: 100vh;
 }
-
+.title {
+        width: 90%;
+        max-width: 500px;
+        padding: 5px;
+        border-radius: 5px;
+        
+}
 h1 {
     font-size: 36px;
     color: #333;
     margin-bottom: 20px;
 }
+
+.title textarea,
+input[type="text"] {
+    width: 80%;
+    max-width: 500px;
+    height: 40px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    resize: none;
+    font-weight: 700;
+    
+}
+
 
 textarea {
     width: 80%;
@@ -29,6 +49,7 @@ textarea {
     border-radius: 5px;
     border: 1px solid #ccc;
     resize: none;
+    font-weight: bolder;
 }
 
 textarea::placeholder {
