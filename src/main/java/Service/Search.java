@@ -18,8 +18,7 @@ public class Search extends HttpServlet {
 	
 //		EmployeeDao dao = new EmployeeDao(this.con);
 //		try {
-//			loginData.put("EMP", dao.selectLoginInfo(userNm, pass));
-//			loginData.put("DEP_LIST", this.getDepartmentList());
+//			loginData.put("account", dao.selectLoginInfo(userNm, pass));
 //		} finally {
 //			DbUtil.closeConnection(this.con);
 //		}
