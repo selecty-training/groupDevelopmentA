@@ -1,20 +1,66 @@
 package action;
 
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import entity.Diary;
+import entity.User;
+
 /**
  * Servlet implementation class BaseServlet
  */
 @WebServlet("/BaseServlet")
-public class BaseServlet extends HttpServlet {       
+public abstract class BaseServlet extends HttpServlet {       
    protected HttpServletRequest request;
    protected HttpServletResponse response;
    protected HttpSession session;
-   protected String massage;
+   protected String message;
+   
+   protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		arg0.setCharacterEncoding("UTF-8");
+		arg1.setContentType("text/html; charset=UTF-8");
+		arg1.setCharacterEncoding("UTF-8");
+
+		this.request = arg0;
+		this.response = arg1;
+		this.session = arg0.getSession();
+		this.message = null;
+		String nextPage = this.getPageName();
+		try {
+			// ログインチェック
+			if (!"login".equals(this.getPageName())) {
+				if (session != null) {
+					User user = (User) session.getAttribute("LOGIN_USER");
+					@SuppressWarnings("unchecked")
+					List<Diary> diaryList = (List<Diary>) session.getAttribute("DEP_LIST");
+					if (
+							(user == null || "".equals(user.getNmUser()))
+							||
+							(diaryList == null || diaryList.size() == 0)
+						){
+						nextPage = "login";
+						throw new Exception("不正なログイン、またはログイン有効期間が過ぎています");
+					}
+				}
+			}
+
+			// 画面ごとの処理
+			nextPage = this.doAction();
+		} catch (Exception e) {
+			e.printStackTrace();
+			message = e.getMessage();
+		}
+
+		arg0.setAttribute("errMsg", this.message);
+		arg0.getRequestDispatcher(nextPage + ".jsp").forward(arg0, arg1);
+	}
 
    protected String[] getInputParameter(String... names) {
 		String[] values = new String[names.length];
@@ -24,4 +70,9 @@ public class BaseServlet extends HttpServlet {
 		}
 		return values;
 	}
+   
+   //抽象メソッド
+   protected abstract String getPageName();
+
+   protected abstract String doAction() throws Exception;
 }
