@@ -56,7 +56,7 @@ public class UserDao extends BaseDao<User>{
 	
 	@Override
 	protected String getTableName() {
-		return "User";
+		return "user";
 	}
 
 	@Override
