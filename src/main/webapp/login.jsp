@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -26,9 +27,9 @@
                     <h1>Diary</h1>
                 </div>
                 <form method="post" action="/groupDevelopmentA/login">
-                    <input type="Username" maxlength="20" placeholder="ユーザー名"
-                        required>
-                    <input type="password" maxlength="20" placeholder="パスワード" required>
+                    <input type="text" name="userNm" maxlength="20" placeholder="ユーザー名"
+                        required value="${userNm}">
+                    <input type="password" name="pass" maxlength="20" placeholder="パスワード" required value="${pass }">
                     <div class="submit">
                         <a href="signup.html">新規登録</a>
                     </div>
