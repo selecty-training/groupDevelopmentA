@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Signup-Diary</title>
-    <link rel="stylesheet" href="loginStyles.css">
+    <link rel="stylesheet" href="css/LoginStyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .background-image {
