@@ -20,15 +20,19 @@
     </style>
 </head>
 <body>
-	<% if(errMsg != null && errMsg.length()  != 0) { %>
-		<p style="color: red;"><%=errMsg %></p>
-	<% } %>
     <div class="background-image" >
         <div class="row res">
             <div class="Diary">
                 <div>
                     <h1>Diary</h1>
                 </div>
+                <c:if test="${errMsg != null}">
+            		<div class="msgBox error">
+               	 		<c:forEach items="${ errMsg }" var="errList">
+                    		<c:out value="${errList}" />
+                		</c:forEach>
+            		</div>
+				</c:if>
                 <form method="post" action="/groupDevelopmentA/login">
                     <input type="text" name="userNm" maxlength="20" placeholder="ユーザー名"
                         required value="${userNm}">
@@ -41,6 +45,7 @@
                     <a href="menu.html">ログイン</a>
                     </div> -->
                     <input class="button" type="submit" value="ログイン">
+                    
                 </form>
             </div>
         </div>

@@ -35,7 +35,7 @@ public abstract class BaseServlet extends HttpServlet {
 		String nextPage = this.getPageName();
 		try {
 			// ログインチェック
-			if (!"login".equals(this.getPageName())) {
+			if (!"login".equals(this.getPageName()) && !"signup".equals(this.getPageName())) {
 				if (session != null) {
 					User user = (User) session.getAttribute("LOGIN_USER");
 					@SuppressWarnings("unchecked")
@@ -46,7 +46,7 @@ public abstract class BaseServlet extends HttpServlet {
 							(diaryList == null || diaryList.size() == 0)
 						){
 						nextPage = "login";
-						throw new Exception("不正なログイン、またはログイン有効期間が過ぎています");
+						throw new Exception("セッションバイバ～～イ");
 					}
 				}
 			}
