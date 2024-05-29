@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login-Diary</title>
-    <link rel="stylesheet" href="loginstyles.css">
+    <link rel="stylesheet" href="css/loginstyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .background-image {
@@ -25,12 +25,12 @@
                 <div>
                     <h1>Diary</h1>
                 </div>
-                <form action="menu.html">
+                <form action="menu.jsp">
                     <input type="Username" maxlength="20" placeholder="ユーザー名"
                         required>
                     <input type="password" maxlength="20" placeholder="パスワード" required>
                     <div class="submit">
-                        <a href="signup.html">新規登録</a>
+                        <a href="signup.jsp">新規登録</a>
                     </div>
                     <hr>
                     <!-- <div class="button">

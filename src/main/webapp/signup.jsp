@@ -36,7 +36,7 @@
                     <input class="button" type="submit" value="登録">
                 </form>
                 <div class="question">
-                    <a href="login.html">アカウントあったんかい❓</a>
+                    <a href="login.jsp">アカウントあったんかい❓</a>
                 </div>
             </div>
         </div>
