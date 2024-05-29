@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -19,16 +20,19 @@
     </style>
 </head>
 <body>
+	<% if(errMsg != null && errMsg.length()  != 0) { %>
+		<p style="color: red;"><%=errMsg %></p>
+	<% } %>
     <div class="background-image" >
         <div class="row res">
             <div class="Signup">
                 <div>
                     <h1>アカウント作る❓</h1>
                 </div>
-                <form action="#" onsubmit="return validateForm()">
-                    <input type="text" maxlength="20" placeholder="ユーザー名" required>
-                    <input type="password" maxlength="20" placeholder="パスワード" required>
-                    <input type="password" maxlength="20" placeholder="パスワードの確認" required>
+                <form action="/groupDevelopmentA/Siginup" onsubmit="return validateForm()">
+                    <input type="text" maxlength="20" placeholder="ユーザー名" required　value="${userNm}">
+                    <input type="password" maxlength="20" placeholder="パスワード" required value="${pass}">
+                    <input type="password" maxlength="20" placeholder="パスワードの確認" required value="${passConfirm}">
                     <hr>
                     <!-- <div class="button">
                         <a href="menu.html">始める</a>
@@ -44,20 +48,6 @@
     <footer>
 
     </footer>
-
-    <script>
-        function validateForm() {
-            var password = document.querySelector('input[type="password"]').value;
-            var confirmPassword = document.querySelectorAll('input[type="password"]')[1].value;
-
-            if (password !== confirmPassword) {
-                alert("さっきと違うよ？パスワード");
-                return false;
-            }
-
-            return true;
-        }
-    </script>
 </body>
 </html>
     
