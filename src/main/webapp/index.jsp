@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>お帰り、なんちゃらなんちゃら</h1>
+        <h1>お帰り、今日もおつかれー</h1>
         <div class="title">
             <input type="text" id="title" placeholder="タイトルを入力してください">
         </div>

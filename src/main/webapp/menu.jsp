@@ -16,8 +16,8 @@
         </div>
         <div class="menu" >
             <div class="circle">    
-                <a href="index.html">今日良いこと <br> あった❓</a>
-                <a href="myData.html">今までのやつ</a>
+                <a href="index.jsp">今日良いこと <br> あった❓</a>
+                <a href="myData.jsp">今までのやつ</a>
             </div>
             
         </div>
