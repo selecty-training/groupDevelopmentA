@@ -21,4 +21,10 @@ public class Insert extends BaseServlet {
 
 		return "menu";
 	}
+
+	@Override
+	protected String getPageName() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
 }
