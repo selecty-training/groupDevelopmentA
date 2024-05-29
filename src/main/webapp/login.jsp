@@ -25,7 +25,7 @@
                 <div>
                     <h1>Diary</h1>
                 </div>
-                <form action="menu.html">
+                <form method="post" action="/groupDevelopmentA/login">
                     <input type="Username" maxlength="20" placeholder="ユーザー名"
                         required>
                     <input type="password" maxlength="20" placeholder="パスワード" required>
