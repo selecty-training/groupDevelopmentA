@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diary</title>
-    <link rel="stylesheet" href="indexStyles.css">
+    <link rel="stylesheet" href="css/indexStyles.css">
 </head>
 <body>
     <div class="container">

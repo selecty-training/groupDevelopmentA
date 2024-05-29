@@ -3,18 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>今までの日記</title>
-<link rel="stylesheet" type="text/css" href="styles.css">
+<title>diary</title>
+<link rel="stylesheet" type="text/css" href="css/myDataStyles.css">
 </head>
 <body>
-
-<h1>Daily Diary</h1>
-
-<div id="diaryList">
-  <ul id="diaryEntries"></ul>
-</div>
-
-<script src="mydata.js"></script>
-
+  <div class="diary">
+    <a href="menu.jsp"><small><small><small>⬅間違って来ちゃったの？</small></small></small></a>
+  </div>
+ <div class="list">
+   <h2>一覧</h2>
+   <form action="#" method="#" name="#">
+      <ul>
+        <li class="title1">
+          <h5>title1</h5>
+          <button class="update btn">更新</button>
+          <button class="delete btn">削除</button>
+        </li>
+        <li>
+          <h5 >title2</h5>
+          <button class="update btn">更新</button>
+          <button class="delete btn">削除</button>
+        </li>
+        <li>
+          <h5>title3</h5>
+          <button class="update btn">更新</button>
+          <button class="delete btn">削除</button>
+        </li>
+      </ul> 
+    </form>
+  </div> 
+  <script src="js/mydata.js"></script>
 </body>
 </html>
+
+
+
+<!--   
+<input id="diaryId" type="hidden" name="diaryId">
+<input id="action" type="hidden" name="action"> -->

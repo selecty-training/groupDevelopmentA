@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Login-Diary</title>
-    <link rel="stylesheet" href="loginstyles.css">
+    <link rel="stylesheet" href="css/loginstyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .background-image {
@@ -38,7 +38,7 @@
                         required value="${userNm}">
                     <input type="password" name="pass" maxlength="20" placeholder="パスワード" required value="${pass }">
                     <div class="submit">
-                        <a href="signup.html">新規登録</a>
+                        <a href="signup.jsp">新規登録</a>
                     </div>
                     <hr>
                     <!-- <div class="button">
