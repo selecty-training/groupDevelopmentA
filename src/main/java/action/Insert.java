@@ -16,15 +16,14 @@ public class Insert extends BaseServlet {
 		);
 
 		if (!pageParam[1].equals(pageParam[2])) {
-			throw new Exception("パスワードが違うよ");
+			throw new Exception("パスワードが違う");
 		}
 
-		return "menu";
+		return "insertMenu";
 	}
 
 	@Override
 	protected String getPageName() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
+		return "insertConfirm";
 	}
 }
