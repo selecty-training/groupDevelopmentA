@@ -20,19 +20,23 @@
     </style>
 </head>
 <body>
-	<% if(errMsg != null && errMsg.length()  != 0) { %>
-		<p style="color: red;"><%=errMsg %></p>
-	<% } %>
     <div class="background-image" >
         <div class="row res">
             <div class="Signup">
                 <div>
                     <h1>アカウント作る❓</h1>
                 </div>
-                <form action="/groupDevelopmentA/Siginup" onsubmit="return validateForm()">
-                    <input type="text" maxlength="20" placeholder="ユーザー名" required　value="${userNm}">
-                    <input type="password" maxlength="20" placeholder="パスワード" required value="${pass}">
-                    <input type="password" maxlength="20" placeholder="パスワードの確認" required value="${passConfirm}">
+                <c:if test="${errMsg != null}">
+            		<div class="msgBox error">
+               	 		<c:forEach items="${ errMsg }" var="errList">
+                    		<c:out value="${errList}" />
+                		</c:forEach>
+            		</div>
+				</c:if>
+                <form method="post" action="/groupDevelopmentA/signup">
+                    <input name="userNm" type="text" maxlength="20" placeholder="ユーザー名" required value="${userNm }">
+                    <input name="pass" type="password" maxlength="20" placeholder="パスワード" required value="${pass}">
+                    <input name="passConfirm" type="password" maxlength="20" placeholder="パスワードの確認" required value="${passConfirm}">
                     <hr>
                     <!-- <div class="button">
                         <a href="menu.html">始める</a>
