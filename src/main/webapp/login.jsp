@@ -20,6 +20,13 @@
     </style>
 </head>
 <body>
+	<c:if test="${errMsg != null}">
+            <div class="msgBox error">
+                <c:forEach items="${ errMsg }" var="errList">
+                    <c:out value="${errList}" />
+                </c:forEach>
+            </div>
+        </c:if>
     <div class="background-image" >
         <div class="row res">
             <div class="Diary">
