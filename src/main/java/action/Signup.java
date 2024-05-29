@@ -7,11 +7,11 @@ import entity.User;
 /**
  * Servlet implementation class Insert
  */
-@WebServlet("/Siginup")
+@WebServlet("/signup")
 public class Signup extends BaseServlet {
 	@Override
 	protected String getPageName() {
-		return "insertConfirm";
+		return "signup";
 	}
 	
 	protected String doAction()throws Exception {
@@ -23,7 +23,7 @@ public class Signup extends BaseServlet {
 		);
 
 		if (!pageParam[1].equals(pageParam[2])) {
-			throw new Exception("パスワードが違うよ");
+			throw new Exception("さっきとパスワードが違うよ");
 		}
 		
 		User user = new User();
