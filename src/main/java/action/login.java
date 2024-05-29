@@ -8,6 +8,12 @@ import Service.Search;
 
 @WebServlet("/login")
 public class login extends BaseServlet {
+	
+	@Override
+	protected String getPageName() {
+		return "login";
+	}
+	
 	protected String doAction() throws Exception {
 		
 		String[] param = super.getInputParameter("userNm", "pass");
@@ -23,11 +29,6 @@ public class login extends BaseServlet {
 		return "menu";
 	}
 
-	@Override
-	protected String getPageName() {
-		// TODO 自動生成されたメソッド・スタブ
-		return null;
-	}
     
 	
 }
