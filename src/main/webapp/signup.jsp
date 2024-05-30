@@ -27,10 +27,10 @@
                 <div>
                     <h1>アカウント作る❓</h1>
                 </div>
-                <form action="/groupDevelopmentA/Siginup" onsubmit="return validateForm()">
-                    <input type="text" maxlength="20" placeholder="ユーザー名" required　value="${userNm}">
-                    <input type="password" maxlength="20" placeholder="パスワード" required value="${pass}">
-                    <input type="password" maxlength="20" placeholder="パスワードの確認" required value="${passConfirm}">
+                <form action="/groupDevelopmentA/signup">
+                    <input name="userNm" type="text" maxlength="20" placeholder="ユーザー名" required　value="${userNm}">
+                    <input name="pass" type="password" maxlength="20" placeholder="パスワード" required value="${pass}">
+                    <input name="passConfirm" type="password" maxlength="20" placeholder="パスワードの確認" required value="${passConfirm}">
                     <hr>
                     <!-- <div class="button">
                         <a href="menu.html">始める</a>
