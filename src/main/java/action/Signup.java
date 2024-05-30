@@ -2,6 +2,8 @@ package action;
 
 import javax.servlet.annotation.WebServlet;
 
+import Service.Update;
+import Service.Update.UPDATE_MODE;
 import entity.User;
 
 /**
@@ -29,7 +31,10 @@ public class Signup extends BaseServlet {
 		User user = new User();
 		user.setNmUser(pageParam[0]);
 		user.setPassword(pageParam[1]);
-		return "insertMenu";
+		
+		Update update = new Update();
+		update.registUser(user, UPDATE_MODE.INSERT);
+		return "menu";
 	}
 
 }
