@@ -1,6 +1,7 @@
 package entity;
 
 public class Diary implements BaseEntity{
+	
 	public static final String TITLE_ID_DIARY = "日記ID";
 	public static final String TITLE_TITLE = "タイトル";
 	public static final String TITLE_TEXT = "本文";
@@ -8,6 +9,8 @@ public class Diary implements BaseEntity{
 	
 	/** 日記ID */
 	private Integer idDiary;
+	/** ユーザーID */
+	private Integer idUser;
 	/** タイトル */
 	private String title;
 	/** 本文 */
@@ -46,5 +49,13 @@ public class Diary implements BaseEntity{
 		}
 		public void setDate(String date) {
 			this.date = date;
+		}
+		
+		//ユーザーID
+		public Integer getIdUser() {
+			return idUser;
+		}
+		public void setIdUser(Integer idUser) {
+			this.idUser = idUser;
 		}
 }

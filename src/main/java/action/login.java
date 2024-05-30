@@ -25,7 +25,7 @@ public class login extends BaseServlet {
 			throw new Exception("名前かパスワードが違うよ");
 		}
 
-		super.session.setAttribute("LOGIN", loginData.get("userNm"));
+		super.session.setAttribute("LOGIN", loginData.get("account"));
 		return "menu";
 	}
 

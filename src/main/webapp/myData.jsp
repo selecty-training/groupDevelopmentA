@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import ="entity.Diary" %>
+<%@ page import="java.util.ArrayList" %>
+<%ArrayList<Diary> diaryList = (ArrayList<Diary>)request.getAttribute("diaryList");%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,26 +17,17 @@
   </div>
  <div class="list">
    <h2>一覧</h2>
-   <form action="#" method="#" name="actionform">
+   <form action="/groupDevelopmentA/showlist" name="myData">
       <ul>
-        <li class="title1">
-          <input type="hidden" name="id" value="${diary_id}">
-          <h5>title</h5>
-          <button class="update btn">更新</button>
-          <button class="delete btn">削除</button>
-        </li>
-        <li >
-          <input type="hidden" name="id" value="2">
-          <h5 >title2</h5>
-          <button class="update btn">更新</button>
-          <button class="delete btn">削除</button>
-        </li>
-        <li>
-          <input type="hidden" name="id" value="3">
-          <h5>title3</h5>
-          <button class="update btn">更新</button>
-          <button class="delete btn">削除</button>
-        </li>
+        <% for(Diary diary : diaryList){ %>
+			<li class="title1">
+          		
+          		<h5><%=diary.getTitle() %></h5>
+          		
+          		<button class="update btn">更新</button>
+          		<button class="delete btn">削除</button>
+        	</li>
+		<% } %>      
       </ul> 
       <input id="diaryId" type="hidden" name="diaryId">
       <!-- こうしんなら"update, 削除なら"dalete" -->
