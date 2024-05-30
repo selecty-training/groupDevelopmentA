@@ -25,7 +25,7 @@ public class Signup extends BaseServlet {
 		);
 
 		if (!pageParam[1].equals(pageParam[2])) {
-			throw new Exception("さっきとパスワードが違うよ");
+			throw new Exception("パスワード確認ができないよ");
 		}
 		
 		User user = new User();

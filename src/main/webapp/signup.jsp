@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Signup-Diary</title>
-    <link rel="stylesheet" href="css/loginStyles.css">
+    <link rel="stylesheet" href="css/LoginStyles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         .background-image {
@@ -27,6 +27,13 @@
                 <div>
                     <h1>アカウント作る❓</h1>
                 </div>
+                <c:if test="${errMsg != null}">
+            		<div class="msgBox error">
+               	 		<c:forEach items="${ errMsg }" var="errList">
+                    		<c:out value="${errList}" />
+                		</c:forEach>
+            		</div>
+				</c:if>
                 <form action="/groupDevelopmentA/signup">
                     <input name="userNm" type="text" maxlength="20" placeholder="ユーザー名" required　value="${userNm}">
                     <input name="pass" type="password" maxlength="20" placeholder="パスワード" required value="${pass}">
