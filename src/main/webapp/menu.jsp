@@ -7,7 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diary Menu</title>
     <link rel="stylesheet" href="css/menuStyles.css">
-
+	 <style>
+        .background-image {
+            background-image: url(images/test.jpg);
+		    background-size: cover;
+		    background-color:rgba(255,255,255,0.6);
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    height: 100vh;
+        }
+    </style>
 </head>
 <body>
     <div class="background-image">
@@ -19,7 +28,6 @@
                 <a href="index.jsp">今日良いこと <br> あった❓</a>
                 <a href="myData.jsp">今までのやつ</a>
             </div>
-            
         </div>
     </div>
 </body>

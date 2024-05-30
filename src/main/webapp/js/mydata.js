@@ -1,4 +1,3 @@
-// btn selecterを取得
 let btn = document.querySelectorAll(".btn");
 let diaryId = document.querySelector("#diaryId");
 let action =document.querySelector("#action");
