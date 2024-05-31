@@ -1,8 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import ="entity.Diary" %>
 <%@ page import="java.util.ArrayList" %>
-<%ArrayList<Diary> diaryList = (ArrayList<Diary>)request.getAttribute("diaryList");%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,19 +19,19 @@
    <h2>一覧</h2>
    <form action="/groupDevelopmentA/showlist" name="myData">
       <ul>
-        <% for(Diary diary : diaryList){ %>
+      	<c:forEach var="diary" items="${diaryList}">
 			<li class="title1">
+          		<input type="hidden" value="${ diary.idDiary }">
           		
-          		<h5><%=diary.getTitle() %></h5>
+          		<h5><c:out value="${diary.title}" /></h5>
           		
-          		<button class="update btn">更新</button>
           		<button class="delete btn">削除</button>
         	</li>
-		<% } %>      
+		</c:forEach>      
       </ul> 
       <input id="diaryId" type="hidden" name="diaryId">
       <!-- こうしんなら"update, 削除なら"dalete" -->
-      <input id="action" type="hidden" name="action" value="update">
+      <input id="action" type="hidden" name="action">
     </form>
   </div> 
   <script src="js/mydata.js"></script>
