@@ -15,8 +15,7 @@
             background-color:rgba(255,255,255,0.6);
             background-blend-mode:lighten;
             background-position: center;
-            background-repeat: no-repeat;
-        }
+            background-repeat: no-repeat;}
     </style>
 </head>
 <body>

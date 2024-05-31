@@ -9,7 +9,8 @@ for(let i=0;i<btn.length;i++){
         action.value = "update";
        }else{
         action.value = "delete";
-       }
+        alert("もう消しちゃったよ！");
+       } 
        document.actionform.submit();
     });
 }   

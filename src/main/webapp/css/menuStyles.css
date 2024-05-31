@@ -35,6 +35,7 @@
     font-style: oblique;
     border-radius: 250px;
     height: 250px;
+    color: rgb(0, 0, 0);
     width: 250px;
     margin: 0 30px;
     justify-content: space-between;
@@ -44,13 +45,13 @@
 }
 .menu a {
     padding: 50px 50px;
-    background: rgba(0, 179, 137, 0.807);
+    background: rgba(121, 209, 189, 0.904);
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
 .menu a:hover {
-    background-color: rgb(102, 255, 0);
+    background-color: rgba(84, 159, 142, 0.904);
     transform: translateY(-2px);
 }
