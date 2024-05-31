@@ -58,6 +58,23 @@ public class DiaryDao extends BaseDao<Diary>{
 		this.closeStatement();
 		return diaryList;	
 	}
+	public void deleteByDiaryId(Integer diaryId) throws SQLException {
+		StringBuilder sql = new StringBuilder();
+
+		// SQLを生成
+		sql.append(" DELETE FROM " + this.getTableName());
+		sql.append(" WHERE");
+		sql.append(" id_diary = ?");	
+
+		// Statementの生成および条件の設定
+		this.stmt = con.prepareStatement(sql.toString());
+		setParameter(diaryId);
+
+		// 登録の実行
+		this.stmt.executeUpdate();
+
+		this.closeStatement();
+	}
 
 	@Override
 	protected String getTableName() {
