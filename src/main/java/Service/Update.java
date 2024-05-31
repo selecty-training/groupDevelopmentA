@@ -57,7 +57,7 @@ public class Update extends BaseService {
 		DiaryDao dao = new DiaryDao(this.con);
 
 		try {
-			dao.deleteByPrimaryKey(diaryId);
+			dao.deleteByDiaryId(diaryId);
 			this.con.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
