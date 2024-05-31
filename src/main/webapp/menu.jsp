@@ -22,11 +22,11 @@
 <form action="/groupDevelopmentA/CheckAction" name="actionform">
     <div class="background-image">
         <div class ="userInfo">
-            <img>${LOGIN.nmUser}</strong>
+            <strong>${LOGIN.nmUser}さん</strong>
         </div>
         <div class="menu" >
             <div class="circle">
-                <a href="index.jsp">今日良いこと <br> あった❓:</a>
+                <a href="index.jsp">今日良いこと <br> あった❓</a>
                 <a href="#" id="showList">今までのやつ</a>
             </div>
         </div>
