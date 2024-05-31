@@ -1,7 +1,6 @@
 package action;
 
 import java.io.IOException;
-import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import entity.Diary;
 import entity.User;
 
 /**
@@ -37,13 +35,10 @@ public abstract class BaseServlet extends HttpServlet {
 			// ログインチェック
 			if (!"login".equals(this.getPageName()) && !"signup".equals(this.getPageName())) {
 				if (session != null) {
-					User user = (User) session.getAttribute("LOGIN_USER");
-					@SuppressWarnings("unchecked")
-					List<Diary> diaryList = (List<Diary>) session.getAttribute("DEP_LIST");
+					User user = (User) session.getAttribute("LOGIN");
 					if (
 							(user == null || "".equals(user.getNmUser()))
-							||
-							(diaryList == null || diaryList.size() == 0)
+							
 						){
 						nextPage = "login";
 						throw new Exception("セッションバイバ～～イ");
