@@ -19,17 +19,27 @@
     </style>
 </head>
 <body>
+<form action="/groupDevelopmentA/CheckAction" name="actionform">
     <div class="background-image">
         <div class ="userInfo">
-            <img> "name" さんの枠</strong>
+            <img>${LOGIN.nmUser}</strong>
         </div>
         <div class="menu" >
-            <div class="circle">    
-                <a href="index.jsp">今日良いこと <br> あった❓</a>
-                <a href="myData.jsp">今までのやつ</a>
+            <div class="circle">
+                <a href="index.jsp">今日良いこと <br> あった❓:</a>
+                <a href="#" id="showList">今までのやつ</a>
             </div>
         </div>
+        <input type="hidden" name="action" id="action">
     </div>
+   </form>
 </body>
+<script>
+	let showList =document.querySelector("#showList");
+	showList.addEventListener("click",function(){
+       document.actionform.submit();
+	});
+</script>
+
 </html>
     
