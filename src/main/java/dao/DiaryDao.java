@@ -19,18 +19,17 @@ public class DiaryDao extends BaseDao<Diary>{
 		StringBuilder sql = new StringBuilder();
 		sql.append("INSERT INTO " + this.getTableName());
 		sql.append("(");
-		sql.append(" id_user, ");
+		sql.append("id_user,");
 		sql.append(" title, ");
 		sql.append(" text, ");
 		sql.append(" date ");
-		sql.append(") VALUES ( ?, ?, ?, ? )");
+		sql.append(") VALUES ( ?,?, ?, CURTIME())");
 		
 		this.stmt = this.con.prepareStatement(sql.toString());
 		setParameter(
-				diary.getIdDiary(),
+				diary.getIdUser(),
 				diary.getTitle(),
-				diary.getText(),
-				diary.getDate()			
+				diary.getText()
 		);
 		
 		this.stmt.executeUpdate();
