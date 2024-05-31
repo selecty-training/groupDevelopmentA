@@ -7,13 +7,13 @@ import Service.Update;
 /**
  * Servlet implementation class DeleteDiary
  */
-@WebServlet(name="/DeleteDiary", urlPatterns={"/deletediary"})
+@WebServlet(name="/DeleteDiary")
 public class DeleteDiary extends BaseServlet {
 	private static final long serialVersionUID = 1L;
        
     @Override
 	protected String getPageName() {
-		return "deleteConfirmDiary";
+		return "DeleteDiary";
 	}
 
 	@Override
