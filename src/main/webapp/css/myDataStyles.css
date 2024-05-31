@@ -33,13 +33,31 @@ body {
 }
 
 .list h5 {
-    width: 300px;
+    width: 100px;
     padding-left: 20px;
     display: inline-block;
     position: relative; 
 }
 
+.list h6 {
+    width: 300px;
+    padding-left: 20px;
+    display: inline-block;
+    position: relative;
+}
+
 .list h5::before {
+    content: '';
+    position: absolute; 
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #20B2AA; 
+    animation: underline 2s infinite alternate;
+}
+
+.list h6::before {
     content: '';
     position: absolute; 
     bottom: -5px; 

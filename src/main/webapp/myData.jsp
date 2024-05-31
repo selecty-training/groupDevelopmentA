@@ -24,6 +24,8 @@
           		<input type="hidden" value="${ diary.idDiary }">
           		
           		<h5><c:out value="${diary.title}" /></h5>
+          		<h5><c:out value="${diary.date}" /></h5>
+          		<h6><c:out value="${diary.text}" /></h5>
           		
           		<button class="delete btn">削除</button>
         	</li>
